@@ -44,8 +44,10 @@
 
 ### Optimizing Remote Running
 
--I still need practice in this area, as I had trouble with the keygen, so it took extra keystrokes to type in the password. Other than that, I used up arrow to summon commands and ; to run multiple commands on one line. Minus the password, it took me about 10 keystrokes
+-I still need practice in this area, as I had trouble with the keygen, so it took extra keystrokes to type in the password. Other than that, I used up arrow to summon commands and ; to run multiple commands on one line. Minus the password, it took me about 10 keystrokes after I edited WhereAmI.java
 
+
+![edit](whereamiedit.png)
 ![optimize](optimize.png)
 
 
