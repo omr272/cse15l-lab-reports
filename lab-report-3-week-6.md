@@ -75,17 +75,17 @@
 
 ## Copying Whole Directories with `scp -r`
 - I first navagated to the directory I wanted to copy. I wanted to copy "/Users/om/Desktop/markdown-parser"
-- I used `pwd` to show the directory
-- I then used `scp -r . ieng6:~/markdown-parser; ssh ieng6; cd markdown-parser; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest` to copy the directory, login to the server, and run the tests
+- This was done with `cd /Users/om/Desktop/markdown-parser`
+- I then used `scp -r -q . ieng6:~/markdown-parser; ssh ieng6 "cd markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"` to copy the directory, login to the server, and run the tests
 - *NOTE* I used `;` to combine multiple commands
 - *NOTE* the `.` is the current directory and source
+- *NOTE* the `-q` tag does not show the long output that happens when copying directories
 - *NOTE* I used the alias name instead of my whole username
 
-![1](part31.png)
-![2](part32.png)
-![3](part33.png)
+![1](realscpoutput.png)
 
-- markdown-parser was successfully copied, but when the tests were ran, it compiled, but there was an error that most likely has to do with the lib files, but I am not sure how to fix this error as I have the most up-to-date Junit files, and my tests pass on my local machine.
+
+- markdown-parser was successfully copied, and the tests ran, compiled, and passed.
 
 
 
